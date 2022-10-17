@@ -1,0 +1,108 @@
+<?php 
+
+session_start();
+
+if (isset($_SESSION['uname']) && isset($_SESSION['password'])) {
+
+ ?>
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>HOME</title>
+    <link rel="stylesheet" href="acc_id.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+     <h1>Hello <?php echo $_SESSION['username']; ?></h1>
+
+     <a href="logout.php">Logout</a>
+
+
+     <section class="bg">
+        <form action="home.php" method="post">
+        <div class="Login_form">
+            <h1 style="margin-top: 10%;"> Create account</h1>
+
+            <input type="text" class="main-input-box" placeholder="Enter the Account Id" name="accid">
+            <!--<div class=" get-here ">
+                <p>Get Account ID</p>
+            </div>
+            <button class="btn ">Generate</button>-->
+            <input type="password " class="input-box " placeholder="create Password " name="accpass">
+
+            <button type="button " class="Login-btn ">Create </button>
+            <!-- <hr>
+                <p>Do you have an account ? <a href="# "> log in</a></p> -->
+            <!--<script src="acc_id.js "></script>-->
+        </div>
+        </form>
+    </section>
+
+</body>
+
+</html>
+<?php
+	
+	// Include file which makes the
+	// Database Connection.
+	include 'dbconnect.php';
+	
+	$accid = $_POST["accid"];
+	$accpass = $_POST["accpass"];
+			
+	
+	$sql1 = "SELECT * FROM acc WHERE accid='$accid' AND accpass='$accpass'";
+	
+	$result1 = mysqli_query($conn, $sql1);
+	
+	if (mysqli_num_rows($result1) === 1) {
+
+        $row = mysqli_fetch_assoc($result1);
+
+        if ($row['accid'] === $accid && $row['accpass'] === $accpass) {
+
+            echo "Logged in!";
+
+            $_SESSION['accid'] = $row['accid'];
+
+            $_SESSION['accpass'] = $row['accpass'];
+
+
+            header("Location: b.html");
+
+            exit();
+
+        }else{
+
+            header("Location: home.php?error=Incorect User name or password");
+
+            exit();
+
+        }
+
+    }else{
+
+        header("Location: index.php?error=Incorect User name or password");
+
+        exit();
+
+    }
+
+
+
+}else{
+
+     header("Location: index.php");
+
+     exit();
+
+}
+
+?>

@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    /* background-image: linear-gradient(black, black); */
+    background: hsla(192, 80%, 51%, 1);
+    background: linear-gradient(90deg, hsla(192, 80%, 51%, 1) 0%, hsla(355, 85%, 63%, 1) 100%);
+}
+
+* {
+    width: 100%;
+}
+
+.container-fluid {
+    display: flex;
+    background-color: 3C3737;
+}
+
+
+/* // for navbar // */
+
+.navbar-header {
+    font-size: 200%;
+    margin-top: 10px;
+}
+
+.navbar-header p {
+    text-decoration: none;
+    background-color: none;
+    color: #fff;
+}
+
+nav ul {
+    color: rgb(235, 240, 245);
+    list-style-type: none;
+    float: right;
+    margin-top: 20px;
+    display: flex;
+    padding-left: 630px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    text-decoration: none;
+    background-color: none;
+    color: #fff;
+    font-size: large;
+    display: flex;
+    padding-left: 13px;
+}
+
+.navbar-side a {
+    text-decoration: none;
+    background-color: none;
+    color: #fff;
+}
+
+.navbar-side a:hover {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    max-width: 80%;
+    margin-top: -2px;
+}
+
+#hi {
+    margin-left: -40%;
+}
+
+a#about {
+    margin-left: 60%;
+}
+
+
+/*div of first  page*/
+
+.w3-content {
+    max-width: 600px;
+    max-height: 400px;
+    margin-top: 7%;
+    margin-left: 10px;
+}
+
+.w3-content p {
+    font-family: 'Martel Sans';
+    font-size: 60px;
+    color: #fff;
+    margin-left: -45%;
+}
+
+.upload-btn {
+    background-color: aqua;
+    height: 50px;
+    width: 100px;
+    margin-left: 50%;
+    margin-top: 10px;
+}
