@@ -23,18 +23,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 	
 	// This sql query is use to check if
 	// the username is already present
+
 	// or not in our Database
 	if($num == 0) {
 		if(($password == $cpassword) && $exists==false) {
-	
+
 		
 				
 			// Password Hashing is used here.
-			$sql = "INSERT INTO `users` ( `username`,
+			$sql1 = "INSERT INTO `users` ( `username`,
 				`password`, `date`) VALUES ('$username',
-				'$cpassword' current_timestamp())";
+				'$password', current_timestamp())";
 	
-			$result = mysqli_query($conn, $sql);
+			$result = mysqli_query($conn, $sql1);
 	
 			if ($result) {
 				$showAlert = true;

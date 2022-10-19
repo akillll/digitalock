@@ -18,7 +18,7 @@ body {
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
     background: whitesmoke;
     padding: 20px;
-    margin: 10% auto 0;
+    margin: -5% 55% 0;
     text-align: center;
     border-radius: 15px;
 }
@@ -27,9 +27,9 @@ body {
     border-radius: 20px;
     padding: 10px;
     margin: 10px;
-    width: 20px solid;
+    width: 10px solid;
     outline: black;
-    margin-left: 0px;
+    margin-left: -10px;
     margin-top: 10%;
 }
 
@@ -37,9 +37,9 @@ body {
     border-radius: 20px;
     padding: 10px;
     margin: 10px;
-    width: 20px solid;
+    width: 15px solid;
     outline: black;
-    margin-left: 0px;
+    margin-left: -10px;
     margin-top: 20%;
 }
 
@@ -60,3 +60,67 @@ button {
     cursor: pointer;
 }
 
+.navbar-header {
+    font-size: 200%;
+    margin-top: 10px;
+}
+
+.navbar-header p {
+    text-decoration: none;
+    background-color: none;
+    color: #fff;
+}
+
+nav ul {
+    color: rgb(235, 240, 245);
+    list-style-type: none;
+    float: right;
+    margin-top: -50px;
+    display: flex;
+    padding-left: 70%;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    text-decoration: none;
+    background-color: none;
+    color: #fff;
+    font-size: large;
+    display: flex;
+    padding-left: 90%;
+}
+
+.navbar-side #hi:hover {
+    text-decoration: none !important;
+    background-color: none;
+    color: floralwhite;
+}
+
+.navbar-side a {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+
+.content {
+    width: 500px;
+    height: 50%;
+    margin-top: 5%;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.content h1 {
+    font-weight: bolder;
+    font-size: 800;
+    color: #fff;
+    margin-left: 10%;
+}
+
+.content h2 {
+    font-weight: bolder;
+    font-size: 800;
+    color: #fff;
+    margin-left: 10%;
+}

@@ -1,3 +1,4 @@
+
 <?php 
 
 session_start(); 
@@ -83,3 +84,4 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
     exit();
 
 }
+?>
